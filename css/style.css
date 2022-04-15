@@ -126,7 +126,9 @@ h6 {
 
 .card__photo {
 	width: 100%;
+	max-height: 250px;
 	margin-bottom: 10px;
+	overflow: hidden;
 }
 
 .card__img {
