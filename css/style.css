@@ -34,6 +34,7 @@ html,
 body {
 	height: 100%;
 	width: 100%;
+	background-color: #000;
 	font-size: 100%;
 	line-height: 1;
 	font-size: 14px;
@@ -75,11 +76,6 @@ ul li {
 	list-style: none;
 }
 
-img {
-	vertical-align: top;
-	width: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -93,9 +89,12 @@ h6 {
 /*--------------------*/
 
 .title {
-	margin-top: 30px;
+	margin: 25px auto 0;
 	text-align: center;
-	font-size: 36px;
+	color: #ffffff;
+	font-size: 64px;
+	font-weight: 700;
+	width: max-content;
 	line-height: 42px;
 }
 
@@ -110,33 +109,49 @@ h6 {
 }
 
 .card {
-	max-width: 250px;
+	max-width: 270px;
 	min-height: 100%;
 	padding: 15px;
-	background-color: #eee;
+	color: #fff;
+	text-align: center;
+	background-color: #333;
 	margin: 0 15px 30px;
-	border-radius: 5px;
 	transition: all .3s;
 	cursor: pointer;
 }
 
 .card:hover {
-	background-color: rgb(150, 148, 255);
+	background-color: rgb(62, 96, 234);
+	border-radius: 25px;
+}
+
+.card:hover .card__img {
+	scale: 1.05;
 }
 
 .card__photo {
 	width: 100%;
-	max-height: 250px;
+	height: 200px;
 	margin-bottom: 10px;
+	transition: all .3s;
 	overflow: hidden;
 }
 
+.card:hover .card__photo {
+	border-radius: 15px;
+}
+
 .card__img {
+	vertical-align: center;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
+	pointer-events: none;
+	transition: .3s ease 0s;
 }
 
 .card__name {
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 22px;
 	margin-bottom: 5px;
 }
